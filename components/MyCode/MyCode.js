@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import Image from "next/image";
+import MyImage from "../../public/Assets/noCard.png";
 const MyCode = () => {
   return (
     <Stack
@@ -14,7 +15,7 @@ const MyCode = () => {
           minHeight: { xs: "180px", md: "300px" },
         }}
       >
-        <Image src="/assets/noCard.png" layout="fill" />
+        <Image src={MyImage} layout="fill" />
       </Box>
       <Box sx={{ textAlign: "center" }}>
         <Typography
