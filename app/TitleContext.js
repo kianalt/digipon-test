@@ -1,11 +1,8 @@
-// app/TitleContext.js
 "use client";
 import { createContext, useContext, useState } from "react";
 
-// Create the context
 const TitleContext = createContext();
 
-// Provider component to wrap the layout
 export function TitleProvider({ children }) {
   const [title, setTitle] = useState("Default Title");
 
@@ -16,7 +13,6 @@ export function TitleProvider({ children }) {
   );
 }
 
-// Custom hook to use the TitleContext
 export function useTitle() {
   return useContext(TitleContext);
 }

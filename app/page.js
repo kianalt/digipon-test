@@ -3,13 +3,13 @@ import { useEffect } from "react";
 import { useTitle } from "./TitleContext";
 import { Container } from "@mui/material";
 //Component
-import MyCode from "@/components/MyCode/MyCode";
+import MyCode from "../components/MyCode/MyCode";
 
 export default function Home() {
   const { setTitle } = useTitle();
 
   useEffect(() => {
-    setTitle("My Code");
+    setTitle("کدهای من");
   }, [setTitle]);
   return (
     <main>

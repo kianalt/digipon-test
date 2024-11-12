@@ -4,7 +4,6 @@ import { BottomNavigation, BottomNavigationAction, Box } from "@mui/material";
 
 export default function BottomNav() {
   const [value, setValue] = React.useState(0);
-  console.log(value);
 
   return (
     <Box

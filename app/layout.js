@@ -1,15 +1,24 @@
+// RootLayout.js
 "use client";
 import "./globals.css";
 import BottomNav from "../components/BottomNav/BottomNav";
 import Header from "@/components/Header/Header";
-import { TitleProvider, useTitle } from "./TitleContext";
+import { useTitle } from "./TitleContext";
+import { TitleProvider } from "./TitleContext";
+import { useEffect, useState } from "react";
 
 export default function RootLayout({ children }) {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <html lang="en">
       <body>
         <TitleProvider>
-          <MainLayout>{children}</MainLayout>
+          {isClient ? <MainLayout>{children}</MainLayout> : null}
         </TitleProvider>
       </body>
     </html>
