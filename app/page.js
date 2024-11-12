@@ -1,8 +1,21 @@
+"use client";
+import { useEffect } from "react";
+import { useTitle } from "./TitleContext";
+import { Container } from "@mui/material";
+//Component
+import MyCode from "@/components/MyCode/MyCode";
+
 export default function Home() {
+  const { setTitle } = useTitle();
+
+  useEffect(() => {
+    setTitle("My Code");
+  }, [setTitle]);
   return (
     <main>
-      <h1>Welcome to the App</h1>
-      <p>Your main content goes here.</p>
+      <Container maxWidth="lg">
+        <MyCode />
+      </Container>
     </main>
   );
 }
