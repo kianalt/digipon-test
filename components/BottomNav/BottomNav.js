@@ -12,7 +12,7 @@ export default function BottomNav() {
         position: "fixed",
         bottom: 0,
         zIndex: 1,
-        height: "84px !important",
+        height: "68px !important",
       }}
     >
       <BottomNavigation
@@ -22,7 +22,7 @@ export default function BottomNav() {
         sx={{
           backgroundColor: "white",
           borderTop: "0.1px solid #e0e0e0",
-          height: "84px",
+          height: "68px",
         }}
       >
         <BottomNavigationAction
